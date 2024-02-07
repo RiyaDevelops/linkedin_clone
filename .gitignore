@@ -1,0 +1,12 @@
+# Visual Studio Code
+.vscode/
+.settings/
+
+#IDE 
+.idea/
+prepros.config 
+
+#0S-Files
+Thumbs.db 
+.DS_store 
+
