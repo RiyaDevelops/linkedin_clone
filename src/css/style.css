@@ -1,0 +1,13 @@
+*{
+    /* border-box, the width and height of an element are defined including padding and border, which means that the total space an element occupies is fixed. This results in more consistent layouts across different elements and browsers. */
+    box-sizing: border-box;
+}
+
+:root {
+    --apple-system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --home-background: #f4f2ee;
+    --primary: white;
+    --text-color: #000000;
+    --search-holder: #edf3f8;
+     }
+  
