@@ -2,3 +2,27 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+/* Reset CSS */
+
+/* Apply a consistent box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default body margin */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* etc. */

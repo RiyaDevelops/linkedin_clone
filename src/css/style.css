@@ -1,6 +1,11 @@
 *{
     /* border-box, the width and height of an element are defined including padding and border, which means that the total space an element occupies is fixed. This results in more consistent layouts across different elements and browsers. */
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*:focus{
+    outline: none;
 }
 
 :root {
@@ -9,5 +14,214 @@
     --primary: white;
     --text-color: #000000;
     --search-holder: #edf3f8;
+    --logo-color: #0a66c2; 
      }
+
+body{
+    background-color: var(--home-background);
+    font-family: var(--apple-system-font);
+    color:var(--text-color);
+}
+
+header{
+    background-color: var(--primary);
+    width: 100vw;
+    height: 62px;
+    border-bottom: 2px solid var(--search-holder);
+    align-items: center;
+    position: fixed; 
+    top:0; /* Fixed position from the top of the viewport */
+    left: 0; /* Fixed position from the left of the viewport */
+    z-index: 100; /* Ensure it's above other content */
+    padding: 0px 24px;
+    box-shadow:  0 5px 10px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    max-width: 1200px; /* or any other desired maximum width */
+    margin: 0 auto;
+    /* background-color: yellow; */
+    display: flex;  /* all three boxes will align with go one after another */
+    /* justify-content: space-evenly; */
+    height: 100%;    /*takes 100% of the height of the parent class, header */
+    cursor:pointer; 
+}
+
+.navbar__left-section{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* background-color: aqua; */
+}
   
+.navbar__logo{
+    line-height: 24px;
+    display: block;
+
+}
+
+.navbar__logo .fa-linkedin-square{
+    font-size: 40px;
+    color: var(--logo-color);
+    font-weight: 600;
+}
+
+.navbar__search{
+    background-color: blueviolet;
+    margin-left: 10px;
+    margin-right: 100px;
+    position:relative;
+    border-radius: 4px;
+    /* width: 300px; */
+}
+
+.navbar__search .fa-search{
+    /* the fa.search icon is a child of the parent nav_search class */
+    font-size: 15px;
+    color: var(--text-color);
+    /* opacity: 0.5; */
+    position: absolute; 
+    top: 7px;
+    left: 10px;
+    line-height: 24px;
+}
+
+.navbar__search input[type ="text"]{
+    background-color: var(--search-holder);
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 8px 40px;
+    /* width: 100%; */
+    border: none;
+    line-height: 24px;
+
+}
+/* MIDDLE SECTION  */
+.navbar__middle-section{
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border-right: 2px solid var(--home-background);
+}
+
+.navbar__menu-box{
+    /* background-color: plum; */
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px 10px;
+    display: flex;
+    /* same height as navbar so it all has same height  */
+    height: 62px;
+    margin-right: 20px;
+    font-family: var(--apple-system-font); 
+    font-weight: 400;
+    line-height: 18px;
+}
+.navbar__menu-box:last-child {
+    margin-left: auto; /* Push the last menu-box to the right */
+    /* margin-right: auto; Push the last menu-box to the right */
+
+}
+
+.menu-tabs__icon {
+    color: var(--text-color);
+    /* fill:#000000; */
+    opacity: 0.7;
+}
+
+#menu-box--last{
+    opacity: 0.9;
+}
+
+ #menu-tab--dark{
+    border-bottom: 2px solid black;
+   
+}
+
+.menu-tabs__icon:hover {
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+
+.menu-tabs__title{
+    width: 100%; /* Or any fixed width you desire */
+    height: auto; /* Or any fixed height you desire */
+    white-space: nowrap; /* Prevent the text from wrapping */
+
+}
+
+.menu-tabs__title span{
+    
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 5px;
+    display: inline-block;
+
+}
+#menu-box--dark{
+    opacity: 0.9;
+}
+
+
+#avatar{
+    width: 30px; /* Make the image fill the container width */
+    height: 30px; /*Make the image fill the container height*/
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 0px;
+}
+
+
+#carat{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    /* background-color: #0a66c2; */
+}
+
+
+/* RIGHT SECTION */
+.navbar__right-section {
+    /* background-color: red; */
+    display: flex;
+    height: 62px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: nowrap; */
+
+}
+
+
+.navbar__right-tab{
+    /* background-color: #0a66c2; */
+    margin: 10px 5px;
+    text-align: center;
+    align-items: center;
+    padding: 2px 10px;
+    height: 62px;
+    font-size: 12px;
+}
+
+
+.navbar__right-icon{
+    font-size: 12px;
+    /* background-color: #cb112d; */
+    padding-top: 5px;
+    line-height: 24px;
+    text-align: center;
+    align-items: center;
+}
+
+#title--ad{
+    line-height: 18px;
+}
