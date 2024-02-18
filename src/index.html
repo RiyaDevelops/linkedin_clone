@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Feed | LinkedIn </title>
+    <title> (5) Feed | LinkedIn </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/queries.css">
+
     <link rel="shortcut icon" href="../icons/linkedin-_1_.ico" type="image/x-icon">
     <!-- Load icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,7 +18,7 @@
 <body>
   <!-- the header is the parent class to the navbar, the header expands from the left side all the way to the right side of the screen -->
   <header>
-   
+
       <!-- the nav bar is the child of the header, it is contained to the middle of the page -->
       <nav class="navbar">
         <!-- left box div begins -->
@@ -39,7 +41,7 @@
           <!-- the individual boxes, there are 6 total  -->
           <div class="menu-tabs__icon" >
             <!-- INSIDE THE INDIVIDUAL BOX THERE IS AN ICON -->
-            <svg class="home__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match"  width="24" height="24" focusable="false">
+            <svg class="home__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"  focusable="false">
                 <path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 5 3.18V2h3v5.09z"></path>
               </svg>
           </div>
@@ -56,7 +58,7 @@
           <!-- the individual boxes, there are 6 total  -->
           <div class="menu-tabs__icon">
             <!-- INSIDE THE INDIVIDUAL BOX THERE IS AN ICON -->
-            <svg class = "friends__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+            <svg class = "friends__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"  focusable="false">
               <path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z"></path>
             </svg>
           </div>
@@ -73,7 +75,7 @@
           <!-- the individual boxes, there are 6 total  -->
           <div class="menu-tabs__icon">
             <!-- INSIDE THE INDIVIDUAL BOX THERE IS AN ICON -->
-            <svg class = "jobs__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+            <svg class = "jobs__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"   focusable="false">
                 <path d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z"></path>
               </svg>
           </div>
@@ -90,7 +92,7 @@
           <!-- the individual boxes, there are 6 total  -->
           <div class="menu-tabs__icon">
             <!-- INSIDE THE INDIVIDUAL BOX THERE IS AN ICON -->
-            <svg class = "messaging__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+            <svg class = "messaging__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"  focusable="false">
               <path d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z"></path>
             </svg>
           </div>
@@ -105,12 +107,14 @@
 
         <div class="navbar__menu-box">
           <!-- the individual boxes, there are 6 total  -->
-          <div class="menu-tabs__icon" id = "menu-box--dark">
+          <div class="menu-tabs__icon">
             <!-- INSIDE THE INDIVIDUAL BOX THERE IS AN ICON -->
-            <svg class="notifications__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+            <svg class="notification__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"   focusable="false">
               <path d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z"></path>
             </svg>
-          
+            <div class="notification-bubble">
+              5
+            </div>
           </div>
           
           <!-- div for the icons title  -->
@@ -126,7 +130,7 @@
           <!-- the individual boxes, there are 6 total  -->
           <div class="menu-tabs__icon" id="menu-box--last">
             <!-- INSIDE THE INDIVIDUAL BOX THERE IS AN ICON -->
-            <img class = "avatar__icon" id="avatar" src="https://randomuser.me/api/portraits/med/women/89.jpg" />
+            <img class = "avatar__icon" id="avatar" src="https://randomuser.me/api/portraits/med/women/39.jpg" />
           </div>
           
            <!-- div for the icons title  -->
@@ -169,14 +173,10 @@
           </div> 
       
 
-     
-
-
-
       </div>   
         <!--====================== right section ends here===================== -->
   
-
+      <!-- ========================= Sidebar Begins========================= -->
 
 
 
@@ -220,9 +220,163 @@
     <!-- nav ends here  -->
   
   </header>
-  <!-- container div, that is containing all the content the middle of the page -->
-  <div class="container">
-  </div>
-   
+<!--========== header ends here  =========== -->
+
+
+<!-- Side Bar begins here  -->
+
+  <section class="home-feed__container">
+    <section class="home-feed">
+      <aside class="sidebar--left">
+        <div class="sidebar--top">
+        <!-- this is the box top of the left side bar -->
+        <div class="sidebar-profile__box">
+          
+          <div class="profile__background">
+            <img class src="images/backdrop.jpeg"  alt="background image for linkedin profile">
+          </div>
+
+          <div class="profile__image">
+            <img src="https://randomuser.me/api/portraits/med/women/39.jpg" />
+          </div>
+          
+          <div class="profile__name">
+            <h1> Emily Johnson </h1>
+           </div>
+
+           <div class="profile__description">
+            <p> Lab Researcher Intern  | Student @ USC  </p>
+           </div>
+
+        </div>
+        <!-- profile box ends here for  left sidebar  -->
+          
+          <div class="sidebar-connections__box">
+            <div class="connections-box__items">
+              
+              <div class="connections__wrapper">
+              <div class="connections__title">
+                <span class ="label"> Connections </span>
+              </div>
+              <div class="connections__number">
+                <a class="number"> 230 </a>
+              </div>
+            </div>
+            <!-- wrapper ens gere -->
+
+              <div class="connections__cta">
+                <a href = "#" class = "cta"> Grow your network </a>
+              </div> 
+
+            </div>
+          </div>
+          <!-- connections box ends here  -->
+
+            <div class="sidebar-ad__box">
+              <div class="ad-message__one">
+                <span> Strengthen your profile with an A.I <br> writing assistant</span>
+              </div>
+
+              <div class="ad-cta">
+                <div class="profile-icon">
+                  <svg id = "ad-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/></svg>                    
+                </div>
+                  <div class="ad-message__two">
+                    <span> Try Premium for $0</span>
+                  </div>
+
+              </div>
+              <!-- ad cta ends here  -->
+            </div>
+            <!-- ad box ends here  -->
+
+            <div class="sidebar-bookmark__box">
+            <div class="bookmark__box--inner">
+               <div class="profile-icon">
+                 <svg id="bookmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg>
+              </div>
+              <span class="bookmark__title"> My items</span>
+            </div>
+            <!-- inner__box ends here  -->
+          </div>
+          <!-- my items box ends here  -->
+
+        </div>
+        <!-- sidebar top ends here -->
+
+        <!-- sidebar bottom begins here -->
+          <div class="sidebar--bottom">
+            <div class="sidebar__box">
+              <a href="#"> Groups </a>
+            </div>
+            <div class="sidebar__box" id="box--two">
+              <div class="events">
+              <a href="#"> Events </a>
+            </div>
+              <div class="events-icon">
+                <svg  id ="plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+              </div>
+            </div>
+            <!-- 2ns box ends here  -->
+            <div class="sidebar__box" id="box--three">
+              <a href="#"> Followed Hashtags </a>
+            </div>
+            <div class="discover__box" id = "box--four">
+              <span> Discover more </span>
+            </div>
+          </div>
+          <!-- sidebar bottom ends here  -->
+
+
+
+
+      </aside>
+
+      <main class="sidebar--middle">
+        <div class="share-box-feed-entry">
+          <div class="share-box-feed-entry__top">
+           
+            <div class="share-box-feed-entry__avatar">
+              <img src="https://randomuser.me/api/portraits/med/women/39.jpg" />
+            </div>
+            <input type= "text" placeholder= "Start a Post" >
+
+            <!-- avatar container ends here  -->
+
+          </div>
+
+        </div>
+        <!-- share box entry , larger div ends here  -->
+
+
+      </main>
+
+      <aside class="sidebar--right">
+        <span> hhhhhh </span>
+
+      </aside>
+
+    </section>
+
+  </section>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

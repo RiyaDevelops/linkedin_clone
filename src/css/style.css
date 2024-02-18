@@ -15,6 +15,8 @@
     --text-color: #000000;
     --search-holder: #edf3f8;
     --logo-color: #0a66c2; 
+    --icon-color:#646464;
+
      }
 
 body{
@@ -34,11 +36,12 @@ header{
     left: 0; /* Fixed position from the left of the viewport */
     z-index: 100; /* Ensure it's above other content */
     padding: 0px 24px;
-    box-shadow:  0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 10px var(white);
 }
 
 .navbar {
-    max-width: 1200px; /* or any other desired maximum width */
+    max-width: 1200px; 
+    /* same width as container, navbar starts in middle of page */
     margin: 0 auto;
     /* background-color: yellow; */
     display: flex;  /* all three boxes will align with go one after another */
@@ -67,12 +70,12 @@ header{
 }
 
 .navbar__search{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     margin-left: 10px;
     margin-right: 100px;
     position:relative;
-    border-radius: 4px;
-    /* width: 300px; */
+    border-radius: 5px;
+    width: 300px;
 }
 
 .navbar__search .fa-search{
@@ -89,11 +92,12 @@ header{
 .navbar__search input[type ="text"]{
     background-color: var(--search-holder);
     font-size: 1rem;
-    border-radius: 4px;
+    border-radius: 5px;
     padding: 8px 40px;
-    /* width: 100%; */
+    width: 100%;
     border: none;
     line-height: 24px;
+   
 
 }
 /* MIDDLE SECTION  */
@@ -104,10 +108,11 @@ header{
     text-align: center;
     justify-content: space-between;
     border-right: 2px solid var(--home-background);
+    
 }
 
 .navbar__menu-box{
-    /* background-color: plum; */
+    background-color: plum;
     align-items: center;
     text-align: center;
     flex-direction: column;
@@ -120,6 +125,9 @@ header{
     font-family: var(--apple-system-font); 
     font-weight: 400;
     line-height: 18px;
+    display: inline-flex;
+  align-items: center;
+    
 }
 .navbar__menu-box:last-child {
     margin-left: auto; /* Push the last menu-box to the right */
@@ -128,23 +136,47 @@ header{
 }
 
 .menu-tabs__icon {
-    color: var(--text-color);
-    /* fill:#000000; */
-    opacity: 0.7;
+   color:var(--icon-color);
+   font-size: 12px;;
+
 }
 
-#menu-box--last{
-    opacity: 0.9;
+.notification__icon{
+    position: relative;
 }
 
- #menu-tab--dark{
-    border-bottom: 2px solid black;
-   
+.notification-bubble{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    top: 0px; /* Adjust if needed */
+    right: 300px; /* Adjust as needed */
+    color: white;
+    font-family: var(--apple-system-font);
+    font-size: 14px;
+    padding: 0px 2px;
+    z-index: 103;
 }
+
+
+.menu-tabs__icon {
+    width: 24px;
+    height: 24px;
+}
+
+
 
 .menu-tabs__icon:hover {
     color: var(--text-color);
     opacity: 0.9;
+}
+
+
+ #menu-tab--dark{
+    border-bottom: 2px solid black;
+   
 }
 
 
@@ -161,13 +193,16 @@ header{
     font-size: 12px;
     font-weight: 400;
     margin-right: 5px;
-    display: inline-block;
-
+    /* display: inline-block; */
 }
 #menu-box--dark{
     opacity: 0.9;
 }
 
+.avatar__icon{
+    /* line-height: 240px; */
+    margin-top: -5px;
+}
 
 #avatar{
     width: 30px; /* Make the image fill the container width */
@@ -176,7 +211,7 @@ header{
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    margin-top: 0px;
+    /* margin-top: 0px; */
 }
 
 
@@ -224,4 +259,335 @@ header{
 
 #title--ad{
     line-height: 18px;
+    color: #5c3b09;
 }
+
+
+/* Left side bar  */
+.home-feed__container{
+    /* background-color: #5c3b09; */
+    margin: 90px 0px 0px 0px;
+    height: 100vh;
+    /* sets the height to 100% of the viewport height */
+    width: 100%;
+
+}
+
+.home-feed{
+    /* background-color: aqua; */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* display: flex; */
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    /* sets the height to 100% of the viewport height */
+}
+
+.sidebar--left{
+    background-color: var(--home-background);
+    height: 100vh;
+    width: 20%;
+    line-height: 24px;
+    /* box-shadow: 10px 5px 10px var(blue); */
+
+}
+
+.sidebar--top{
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sidebar-profile__box{
+    background-color: white; 
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom:  2px solid var(--search-holder);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.profile__background {
+    width: 100%;
+    /* taking 100% of its parent class */
+    height: auto;
+    position: relative;
+    background-size: cover;
+    
+}
+
+
+.profile__background img{
+    max-width: 100%; /* Set the maximum width to 100% of its container */
+    height: auto; /* Allow te height to adjust proportionally */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+ .profile__image{
+    padding-bottom: 40px;
+
+} 
+
+.profile__image img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 127px;
+    left: 202px;
+    border: solid white 6px;
+    /* transform: translate(-50%, -50%); */
+}
+
+.profile__name{
+    /* background-color: #5c3b09; */
+    line-height: 24px;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.profile__description{
+    /* background-color: cadetblue; */
+    opacity: 0.6;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 0px 20px 0px;
+}
+
+/* connections bax */
+.sidebar-connections__box{
+    /* background-color: RED; */
+    padding: 10px 12px;
+    /* align-items: baseline; */
+    border-bottom:  2px solid var(--home-background);
+    
+
+}
+.connections-box__items{
+    /* background-color: #5c3b09; */
+    /* display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 1fr); */
+    font-size: 12px;
+    /* display: block; */
+}
+    .connections__wrapper{
+        display: flex;
+        justify-content: space-between
+    }
+
+    .connections__title{
+    color: #646464;
+    font-weight: 600;
+    text-align: left;
+    /* background-color: aqua; */
+    }
+
+    .connections__number{
+    /* background-color: darksalmon; */
+    text-align: center;
+    color: var(--logo-color);
+
+    }
+
+    .connections__number , .number {
+        /* background-color: darksalmon; */
+        display: flex;
+        justify-content: flex-end; 
+        /* margin-left: 20px; */
+    
+        }
+
+    .connections__cta , .cta{
+        font-size: 12px;
+        font-weight: 600;
+        color: black;
+        text-align: left;
+        text-decoration: none;
+    }
+    
+    
+    /* ad box begins here  */
+    .sidebar-ad__box{
+        border-bottom:  2px solid var(--home-background);
+        padding: 10px 12px;
+    }
+
+    .ad-message__one{
+        /* background: #5c3b09; */
+        align-items: left;
+        margin-bottom: 10px;
+
+    }
+
+    .ad-message__one span{
+        font-size: 12px;
+        color: grey;
+        font-weight: 500;
+        line-height: 16px;
+
+    }
+
+    .ad-cta{
+        display: flex;
+        align-items: left;
+    }
+
+    .profile-icon {
+        margin-right: 7px;
+    }
+
+    .profile-icon #ad-icon {
+        fill: rgb(248, 199, 126);
+        width: 12px;
+        height: 12px;
+    }
+
+    .ad-message__two{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .ad-message__two span{
+        font-weight: 600;
+        
+    }
+
+    /* bookmark/ my item section */
+    .sidebar-bookmark__box{
+        /* background-color: #646464; */
+        padding: 10px 12px;
+        height: auto;
+        /* border-bottom: 2px solid black; */
+        border-radius: 5px;
+    }
+
+    .bookmark__box--inner{
+        display: flex;
+        line-height: 16px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .profile-icon #bookmark-icon{
+        font-size: 12px;
+        height: 12px;
+    }
+
+    .bookmark__title{
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+    }
+
+/* bottom od side bar  */
+
+.sidebar--bottom{
+    background-color: white;
+    margin-top: 15px;
+    /* padding: 10px 12px; */
+    border-radius: 10px;
+    line-height: 20px;
+    /* background-color: #5c3b09; */
+
+
+}
+
+.sidebar--bottom a{
+    text-decoration: none;
+    color: var(--logo-color);
+    font-weight: 600;
+    /* line-height: 16px; */
+    text-align: left;
+    align-items: left;
+    font-size: 12px;   
+}
+
+
+.sidebar__box{
+    padding: 2px 0px;
+    /* background-color: #5c3b09; */
+    /* width: 100%; */
+    padding: 10px 12px;
+}
+
+
+ #box--two{
+ display: flex;
+ /* background-color: #5c3b09; */
+ justify-content: space-between;
+}
+
+
+.events-icon svg {
+    width: 14px;
+    height: 14px;
+    font-weight: 600;
+}
+
+.discover__box{
+    /* background-color: aquamarine; */
+    width: 100%;
+    border-top: 2px solid var(--search-holder);
+    text-align: center;
+    align-items: center;
+    padding: 16px 20px;
+    color: var(--icon-color);
+    font-weight: 600;
+    font-size: 14px;
+    /* opacity: 0.9; */
+    
+}
+
+ /* middle section of home feed */
+
+ .sidebar--middle{
+    background: yellow;
+    width: 50%;
+    height: 100vh;
+ }
+
+
+ /* <div class="share-box-feed-entry">
+          <div class="share-box-feed-entry__top">
+           
+            <div class="share-box-feed-entry__avatar">
+              <img src="https://randomuser.me/api/portraits/med/women/39.jpg" />
+            </div>
+            <input type= "text" placeholder= "Start a Post" >
+
+
+          </div>
+
+        </div> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .sidebar--right{
+    width: 30%;
+    height: 100vh;
+    background-color: blueviolet;
+
+ }
