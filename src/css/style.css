@@ -16,6 +16,8 @@
     --search-holder: #edf3f8;
     --logo-color: #0a66c2; 
     --icon-color:#646464;
+    --article-icon:#e06847;
+    --event-icon:#c37d16;
 
      }
 
@@ -112,7 +114,7 @@ header{
 }
 
 .navbar__menu-box{
-    background-color: plum;
+    /* background-color: plum; */
     align-items: center;
     text-align: center;
     flex-direction: column;
@@ -302,6 +304,8 @@ header{
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow values as needed */
+
 }
 
 .sidebar-profile__box{
@@ -422,6 +426,8 @@ header{
     .sidebar-ad__box{
         border-bottom:  2px solid var(--home-background);
         padding: 10px 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow values as needed */
+
     }
 
     .ad-message__one{
@@ -553,25 +559,152 @@ header{
  /* middle section of home feed */
 
  .sidebar--middle{
-    background: yellow;
+    /* background: yellow; */
     width: 50%;
     height: 100vh;
+    /* background-color: white; */
  }
 
+ .share-box-feed-entry{
+    width: 100%;
+    line-height: 24px;
+    /* height: 20%; */
+    background-color: white;
+    border-radius: 8px;
+    /* box-shadow: #8c8c8c 0px 0px 0px 1px; */
+    color:#646464;
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 100px; */
+    /* two sitting on top of eahcother */
+    padding-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow values as needed */
 
- /* <div class="share-box-feed-entry">
-          <div class="share-box-feed-entry__top">
-           
-            <div class="share-box-feed-entry__avatar">
-              <img src="https://randomuser.me/api/portraits/med/women/39.jpg" />
+ }
+
+ .share-box-feed-entry__top{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    /* line-height: 1px; */
+
+ }
+
+ .share-box-feed-entry__avatar{
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: chartreuse; */
+    width: 60px;
+    height: 60px;
+ }
+
+ .share-box-feed-entry__avatar img{
+        border-radius: 50%;
+        width: 100%;
+     }
+    
+
+.share-box-feed-post{
+    /* background-color: #5c3b09; */
+    width: 90%;
+}
+
+.share-box-feed-post input[type=text]{
+    background-color: white;
+    border-radius: 35px;
+    padding: 20px;
+    border: 1px solid grey;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+
+}
+
+.share-box-feed-post input[type=text]:hover{
+    background-color: var(--search-holder);
+
+}
+
+.share-box-feed__bottom{
+ /* background-color: #646464; */
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ line-height: 16px; 
+ /* flex-wrap: wrap;  */
+/* gives front and back margin  */
+}
+
+
+.share-box-feed__links{
+    /* background-color: chartreuse; */
+    display: flex;  
+    line-height: 16px;  
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.share-box-icons{
+    width: 25px;
+    height: 25px;
+    font-weight: 600;
+    /* font-size: 14px; */
+}
+ #media {
+    fill: var(--logo-color);
+}
+
+#events {
+    fill: var(--event-icon);
+}
+
+#article {
+    fill: var(--article-icon);
+}
+
+.link__titles a {
+    text-decoration: none;
+    color: var(--icon-color);
+    /* background-color: #c37d16; */
+    font-weight: 600;
+    padding: 0px 8px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+
+
+
+/* <div class="share-box-feed__bottom">
+              <div class="share-box-feed__links" id="media__link">
+                <div class="share-box-icons">
+                <svg id="media" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>             
+              </div>
+              <div class="link__titles">
+              <a href="#"> Media</a>
             </div>
-            <input type= "text" placeholder= "Start a Post" >
+
+              <div class="share-box-feed__links" id="media__link">
+                <div class="share-box-icons">
+                  <svg id ="events" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192h80v56H48V192zm0 104h80v64H48V296zm128 0h96v64H176V296zm144 0h80v64H320V296zm80-48H320V192h80v56zm0 160v40c0 8.8-7.2 16-16 16H320V408h80zm-128 0v56H176V408h96zm-144 0v56H64c-8.8 0-16-7.2-16-16V408h80zM272 248H176V192h96v56z"/></svg>
+              </div>
+              <a href="#"> Events </a>
+              </div>
+
+              <div class="share-box-feed__links" id="media__link">
+                <div class="share-box-icons">
+                  <svg id="article" xmlns=http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M168 80c-13.3 0-24 10.7-24 24V408c0 8.4-1.4 16.5-4.1 24H440c13.3 0 24-10.7 24-24V104c0-13.3-10.7-24-24-24H168zM72 480c-39.8 0-72-32.2-72-72V112C0 98.7 10.7 88 24 88s24 10.7 24 24V408c0 13.3 10.7 24 24 24s24-10.7 24-24V104c0-39.8 32.2-72 72-72H440c39.8 0 72 32.2 72 72V408c0 39.8-32.2 72-72 72H72zM176 136c0-13.3 10.7-24 24-24h96c13.3 0 24 10.7 24 24v80c0 13.3-10.7 24-24 24H200c-13.3 0-24-10.7-24-24V136zm200-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H376c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H376c-13.3 0-24-10.7-24-24s10.7-24 24-24zM200 272H408c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80H408c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg>              </div>
+              <a href="#"> Write article</a>
+              </div>
 
 
-          </div>
-
-        </div> */
-
+          </div> */
 
 
 
