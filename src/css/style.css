@@ -377,7 +377,7 @@ header{
     opacity: 0.6;
     font-size: 14px;
     line-height: 20px;
-    padding: 10px 0px 20px 0px;
+    padding: 10px 5px 20px 5px;
     text-align: center;
     align-items: center;
 }
@@ -629,7 +629,7 @@ header{
 .share-box-feed-post input[type=text]{
     /* background-color: lightgray; */
     border-radius: 35px;
-    padding: 20px;
+    padding: 17px;
     border: 1px solid grey;
     font-size: 14px;
     font-weight: 550;
@@ -638,10 +638,11 @@ header{
 
 }
 
-/* .share-box-feed-post input[type=text]:hover{
-    background-color: lightgray;
+.share-box-feed-post input[type=text]:hover{
+    background-color: var(--search-holder);
+    /* opacity: 0.5; */
 
-} */
+}
 
 .share-box-feed__bottom{
  /* background-color: #646464; */
@@ -786,7 +787,7 @@ hr {
     display: flex;
     margin: 5px 10px 10px 10px; 
     /* top right bottom left */
-    padding:10px 10px 5px 10px;
+    padding:10px 10px 10px 10px;
     border-bottom: var(--search-holder) 2px solid;
     
 }
@@ -1165,9 +1166,9 @@ hr {
 
 
  .sidebar--right{
-    width: 30%;
-    height: 100vh;
-    /* background-color: blueviolet; */
+    width: 300px;
+    height: 100dvh;
+    flex-direction: column;
  }
 
     .news-feed--top{
@@ -1194,12 +1195,16 @@ hr {
 .news-feed-modules{
     /* background-color: #646464; */
     text-align: left;
-    line-height: 15px;
+    line-height: 1.5;
     display: inline-flex;
     flex-direction: column;
     padding:5px;
-    margin: 0px;
+    width: 100%;
+    /* overflow: hidden; */
+    /* margin: 0px; */
     /* margin: 6px;; */
+    /* white-space: wrap; Prevent line breaks */
+
     
 
 }
@@ -1223,6 +1228,13 @@ hr {
     padding-left: 20px; /* Adjust as needed */
 }
 
+
+.news-feed__icon{
+    width: 15px;
+    height: 15px;
+}
+
+
 .news-feed__time{
     padding-left: 20px; /* Adjust as needed */
     opacity: 0.3;
@@ -1234,10 +1246,24 @@ hr {
     /* background-color: #5c3b09; */
     display: inline-flex;
     /* padding-left: 20px; Adjust as needed */
-    margin: 0px 0px 0px 2px;
-    padding: 5px 7px 20px 20px;
+    margin: 0px 0px 10px 10px;
+    padding:15px;
     text-align: center;
     align-items: center;
+}
+
+.news-feed__tab:hover{
+    background-color: var(--search-holder);
+    
+}
+
+.news-feed__header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-right: 20px;
+    padding: 8px;
 }
 
 .news-feed__tab-title{
@@ -1253,6 +1279,171 @@ hr {
     fill: var(--icon-color);
     opacity: 0.5;
 }
+
+/* news feed bottom  */
+
+.news-feed--bottom{
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* horizontal offset, vertical offset, blur radius, spread radius, color */
+    padding: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+
+}
+
+.ad-box{
+    /* background-color: pink; */
+    display: flex;
+    font-size: 14px;
+    justify-content: right;
+    text-align: right;
+    padding: 5px;
+    position: sticky;
+  
+}
+
+.ad-name{
+    margin-right: 10px;
+}
+.ad-ellipsis{
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;;
+}
+
+.ad-message{
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+    /* background-color: #646464; */
+    padding:10px;
+}
+
+.ad-component{
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: #0a66c2; */
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.ad-avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.ad-avatar img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.ad-image{
+    width: 80px;
+    height: 80px;
+}
+.ad-image img{
+    width: 80px;
+    height: 80px;
+}
+
+.ad-message{
+    font-size: 16px;
+    line-height: 1.5;
+    padding:10px;
+}
+
+.ad-follow{
+    border-radius: 30px;
+    border: var(--logo-color) 2px solid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 35px;
+    padding: 5px;
+    margin-left: 100px;
+    color: var(--logo-color);
+    font-weight: 600;;
+}
+.ad-follow:hover{
+    background-color: lightskyblue;
+    opacity: 0.9;
+    color: var(--logo-color);
+}
+.ad-follow span{
+    text-align: center;
+    align-items: center;
+}
+
+.footer{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   row-gap: 10px;
+   align-items: center;
+   font-size: 12px;
+   justify-content: center;
+   margin: 16px 24px;
+   /* background-color: #646464; */
+   padding: 10px;
+}
+
+.footer span{
+    text-align: left;
+    margin: 5px;
+}
+
+.copyright{
+  /* background-color: red; */
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  justify-content: center;
+  margin: 16px 24px;
+}
+
+.copyright-message{
+    font-size: 12px;
+    margin-top: 2px;
+ 
+}
+.copyright span{
+    white-space: nowrap;
+    text-align: center;
+    align-items: center;
+
+}
+.linkedin-copyright__logo{
+    width:80px;
+    height:80px;
+  
+}
+
+.linkedin-copyright__logo img{
+    width: 80px;
+    height:20px;
+   
+
+}
+
+
+/* @media only screen and (max-width: 992px) {
+    body {
+      background-color: lightblue;
+    }
+
+    .sidebar--right{
+        display: none;
+    }
+
+    
+  } */
 /* <div class="news-feed__tab">
 <div class="news-feed__tab-title"></div>
 <span> Show more </span>
