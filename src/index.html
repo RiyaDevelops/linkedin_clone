@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> (14) Feed | LinkedIn </title>
+    <title> (9) Feed | LinkedIn </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/queries.css">
@@ -27,8 +27,15 @@
               <i class="fa fa-linkedin-square"></i> 
             </div>
             <div class="navbar__search">
+              
+              <div class="search-icon">
               <i class="fa fa-search"></i>
-              <input type="text" name="search" placeholder="Search">
+            </div>
+            
+             <div class="search-placeholder">
+            <input type="text" name="search" placeholder="Search">
+            </div>
+            <!-- search place holder ends here -->
             </div>
         </div>
         <!-- div closes here,  navbar's left section  -->
@@ -116,7 +123,7 @@
               <path d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z"></path>
             </svg>
             <div class="notification-bubble">
-              10
+              5
             </div>
           </div>
           
@@ -153,70 +160,47 @@
       <div class="navbar__right-section">
       
         <!-- first box within the right section of the navbar -->
-        <div class="navbar__right-tab" id="left-side">
+        <!-- <div class="navbar__right-tab" id="left-side"> -->
+          <div class="navbar__menu-box">
+            <!-- the individual boxes, there are 6 total  -->
+            <div class="menu-tabs__icon">
 
-          <div class="navbar__right-icon">
-            <svg class ="business__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" data-metatip="true" data-selected="true" data-label-id="0">
-              <path d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z"></path>
-            </svg>
+              <svg class ="business__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" data-metatip="true" data-selected="true" data-label-id="0">
+                <path d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z"></path>
+              </svg>
+
+              <svg class = "navbar__ellipses--one" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/>
+              </svg>
+
+              
+            </div>
+            
+            <!-- div for the icons title  -->
+            <div class="menu-tabs__title" id ="carat">
+              <span> For Business </span>
+              <i class="fa fa-caret-down"></i>
+            </div>
+  
           </div>
-         
-          <div class="menu-tabs__title" id ="carat"> 
-            <span>  For Business </span>
-            <i class="fa fa-caret-down"></i>
-          </div>
+        
           <!-- menu-tabs__title ends here -->
           
-        </div>
+        <!-- </div> -->
         <!-- right tab ends here  -->
           
           
-          <div class="menu-tabs__title">
-          <span id ="title--ad"><u> Try Premium for <br>$0 </u></span>
+          <div class="menu-tabs__title" id="navbar-ad">
+          <span id ="title--ad"> <u> Try Premium for <br>$0 </u> </span>
           </div> 
       
 
       </div>   
         <!--====================== right section ends here===================== -->
   
-      <!-- ========================= Sidebar Begins========================= -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       </div>
       <!-- navbar middle section box ends here  -->
-
-
-
-
 
 
     </nav>
@@ -226,7 +210,7 @@
 <!--========== header ends here  =========== -->
 
 
-<!-- Side Bar begins here  -->
+<!-- ========================= Sidebar Begins========================= -->
 
   <section class="home-feed__container">
     <section class="home-feed">
@@ -236,7 +220,7 @@
         <div class="sidebar-profile__box">
           
           <div class="profile__background">
-            <img class src="images/backdrop.jpeg"  alt="background image for linkedin profile">
+            <img class src="images/golden-state-background.jpeg"  alt="background image for linkedin profile">
           </div>
 
           <div class="profile__image">
@@ -331,6 +315,12 @@
           <!-- sidebar bottom ends here  -->
 
 
+            <div class="sidebar-more">
+              <span> Show More </span>
+              <div class="sidebar-chevron--down">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+               </div>
+            </div>
 
 
       </aside>

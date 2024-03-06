@@ -39,6 +39,7 @@ header{
     z-index: 100; /* Ensure it's above other content */
     padding: 0px 24px;
     box-shadow: 0px 5px 10px var(white);
+    justify-content: center;
 }
 
 .navbar {
@@ -50,19 +51,19 @@ header{
     /* justify-content: space-evenly; */
     height: 100%;    /*takes 100% of the height of the parent class, header */
     cursor:pointer; 
+    justify-content: center;
 }
 
 .navbar__left-section{
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
+    /* margin-left: 36px; */
     /* background-color: aqua; */
 }
   
 .navbar__logo{
-    line-height: 24px;
     display: block;
-
 }
 
 .navbar__logo .fa-linkedin-square{
@@ -91,6 +92,7 @@ header{
     line-height: 24px;
 }
 
+
 .navbar__search input[type ="text"]{
     background-color: var(--search-holder);
     font-size: 1rem;
@@ -102,7 +104,7 @@ header{
    
 
 }
-/* MIDDLE SECTION  */
+/* ============================================ nav bar MIDDLE SECTION  ===========================*/
 .navbar__middle-section{
     /* background-color: aquamarine; */
     display: flex;
@@ -123,7 +125,8 @@ header{
     display: flex;
     /* same height as navbar so it all has same height  */
     height: 62px;
-    margin-right: 20px;
+    margin-right: 14px;
+    /* outside spacing */
     font-family: var(--apple-system-font); 
     font-weight: 400;
     line-height: 18px;
@@ -139,22 +142,11 @@ header{
 
 .menu-tabs__icon {
    color:var(--icon-color);
-   font-size: 12px;;
-   width: 24px;
-   height: 24px;
+   width: 22px;
+   height: 22px;
    position: relative;
 /* thats the parent class in child  */
 }
-
-.menu-tabs__icon {
-    width: 24px;
-    height: 24px;
-    position: relative;
-}
-
-/* .notification__icon{
-    position: relative;
-} */
 
 .notification-bubble{
     position: absolute;
@@ -173,8 +165,6 @@ header{
 }
 
 
-
-
 .menu-tabs__icon:hover {
     color: var(--text-color);
     opacity: 0.9;
@@ -186,11 +176,12 @@ header{
    
 }
 
-
 .menu-tabs__title{
-    width: 100%; /* Or any fixed width you desire */
-    height: auto; /* Or any fixed height you desire */
-    white-space: nowrap; /* Prevent the text from wrapping */
+    width: 100%;
+    height: auto; 
+    white-space: nowrap; 
+    /* Prevent the text from wrapping */
+    /* background-color: yellow; */
 
 }
 
@@ -231,7 +222,7 @@ header{
 }
 
 
-/* RIGHT SECTION */
+/* =====================RIGHT SECTION=============== */
 .navbar__right-section {
     /* background-color: red; */
     display: flex;
@@ -239,38 +230,31 @@ header{
     text-align: center;
     align-items: center;
     justify-content: center;
+    /* padding:2px; */
     /* flex-wrap: nowrap; */
 
 }
 
-
-.navbar__right-tab{
-    /* background-color: #0a66c2; */
-    margin: 10px 5px;
-    text-align: center;
-    align-items: center;
-    padding: 2px 10px;
-    height: 62px;
-    font-size: 12px;
-}
-
-
-.navbar__right-icon{
-    font-size: 12px;
-    /* background-color: #cb112d; */
-    padding-top: 5px;
-    line-height: 24px;
-    text-align: center;
-    align-items: center;
-}
-
 #title--ad{
-    line-height: 18px;
+    font-size: 12px;
     color: #5c3b09;
+
+}
+
+.navbar__ellipses--one{
+    display: none;
+}
+
+#navbar-ad{
+    /* background: yellow; */
+    padding:5px;
+}
+#title--ad{
+    /* background-color: blue; */
 }
 
 
-/* Left side bar  */
+/* ======================== feed containers  ============================== */
 .home-feed__container{
     /* background-color: #5c3b09; */
     margin: 90px 0px 0px 0px;
@@ -294,6 +278,7 @@ header{
     /* sets the height to 100% of the viewport height */
 }
 
+/* LEFT SIDE BAR BEGINS HERE*/
 .sidebar--left{
     background-color: var(--home-background);
     height: 100vh;
@@ -333,7 +318,7 @@ header{
     /* taking 100% of its parent class */
     height: auto;
     /* position: relative; */
-    background-size: cover;    
+    background-size: cover;   
     
 }
 
@@ -569,7 +554,29 @@ header{
     
 }
 
- /* middle section of home feed */
+.sidebar-more{
+    background-color: var(--home-background);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    display: none;
+    
+}
+
+
+.sidebar-chevron--down{
+    width: 15px;
+    height: 15px;
+    margin-left:4px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+ /* ========================middle section of home feed */
 
  .home-feed--middle{
     /* background: yellow; */
@@ -710,6 +717,7 @@ header{
     /* line-height: 16px; */
     align-items: center;
     justify-content: space-between;
+    
     opacity: 0.8;
     font-size: 13.3px;
 }
@@ -756,8 +764,6 @@ hr {
 .divider__dropdown-icon{
     width: 10px;
     height: 10px;
-    align-items: center;
-    text-align: center;
     /* background-color: #c37d16; */
     margin-left: 2px;
     opacity: 0.8;
@@ -1134,12 +1140,6 @@ hr {
 }
 
 
-#like-btn{
-    /* margin-left: 5px; */
-    /* background-color: #e06847; */
-
-}
-
 
 .btn-title{
     font-size: 16px;
@@ -1429,77 +1429,4 @@ hr {
     width: 80px;
     height:20px;
    
-
 }
-
-
-/* @media only screen and (max-width: 992px) {
-    body {
-      background-color: lightblue;
-    }
-
-    .sidebar--right{
-        display: none;
-    }
-
-    
-  } */
-/* <div class="news-feed__tab">
-<div class="news-feed__tab-title"></div>
-<span> Show more </span>
-</div>
-<div class="chevron-down">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
-</div> */
-
-/* 
-
- <div class="sidebar--right">
- <div class="news-feed">
-   <div class="news-feed--top">
-    
-     <div class="news-feed__title">
-     <span> LinkedIn News</span>
-     </div>
-     
-     <div class="news-feed__icon">
-     <svg role="none" aria-hidden="true" class="news-module__notify-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" data-supported-dps="16x16" data-test-icon="signal-notice-small">
-       <!---->    
-       
-           <use href="#signal-notice-small" width="16" height="16"></use>
-       </svg>
-     </div>
-     <!-- news feed icon  -->
- <div class="news-feed-modules">
-     <div class="news-feed__headline">
-     <ul>
-      <li><h3> AMC : concert films driving a growth </h3></li>
-     </ul>
-     </div>
-     <!-- headline ends here -->
-     <div class="news-feed__time">
-       <span> 1h ago </span>
-     </div>
-     <!-- time ends here -->
-
-   </div>
-   <!-- modules end here -->
-
-
-
-   </div>
-   <!-- top news feed ends  -->
-
-
-
-
-
-
-
-
-
-
- </div>
- <!-- larger news feed  -->
-
-</div> */

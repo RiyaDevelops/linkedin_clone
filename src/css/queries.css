@@ -1,8 +1,1177 @@
-/* Header Media Querie */
+/* Media Queries */
 
-/* Everything less than 600 px  */
+
+/* =================================Navbar Media Queries=============================== */
+@media screen and  (max-width: 589px){
+    body{
+        background-color: blueviolet;
+    }
+
+/* ==========LEFT SIDE OF NAVBAR ============*/
    
+.navbar {
+        max-width: 1200px; 
+        /* same width as container, navbar starts in middle of page */
+        margin: 0 auto;
+        /* background-color: yellow; */
+        display: flex;  /* all three boxes will align with go one after another */
+        /* justify-content: space-evenly; */
+        height: 100%;    /*takes 100% of the height of the parent class, header */
+        cursor:pointer; 
+        text-align: center;
+        align-items: center;
+        line-height: 24px;
+    }
+          
+    .navbar__search{
+        margin-right: 40px;
+        /* don't need a large right margin for small devices */
+        width: 0px;
+        /* no longer exists, does need a width */
+    }
+    
+    .navbar__search .fa-search{
+        /* the fa.search icon is a child of the parent nav_search class */
+        font-size: 20px;
+        /* its bigger  */
+        opacity: 0.6;
+        /* faded  */
+        top: 10px;
+        /* changed */
+        left: 5px;
+        /* changed */
+        line-height: none;
+    }  
+    .navbar__search input[type ="text"]{
+        background: transparent;
+        /* made transparent */
+        display:none;
+        /* the search placeholder gone */
+}
+
+/* ====================== NAVBAR MIDDLE SECTION ================================== */
+.navbar__middle-section{
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border-right: none;
+    
+}
+
+.navbar__menu-box{
+    /* background-color: plum; */
+    margin-right: 05px;
+    /* changed , margin -right */
+}
+.navbar__menu-box:last-child {
+    margin-left: auto; /* Push the last menu-box to the right */
+    /* margin-right: auto; Push the last menu-box to the right */
+
+}
+
+.menu-tabs__icon {
+   /* background: red; */
+   width: 25px;
+   height: 25px;
+}
+
+.notification-bubble{
+    top: -8px; 
+    right: -8px; 
+    /* new top and right positioning  */
+}
+
+ #menu-tab--dark{
+    border-bottom: none;
+    /* no border bottom for small devices */
+}
+
+.home__icon{
+    fill:black; 
+    /* changed, filled in black */
+}
+
+.menu-tabs__title span{
+    display: none;
+    /* changed, don't display menu tab titles */
+}
+
+.menu-tabs__title #navbar-ad{
+    display: none;
+}
+
+#menu-box--dark{
+    opacity: none;
+}
 
 
+#avatar{
+    width: 25px; /* Make the image fill the container width */
+    height: 25px; /*Make the image fill the container height*/
+    /* changed, made smaller */
+}
 
+#carat{
+    display: none;
+    /* changed, don't display carat */
+}
+/* ========================== Navbar RIGHT SECTION ============*/
+
+.navbar__right-section {
+    /* background-color: red; */
+    padding:5px;
+    /* gave it a small padding */
+}
+
+
+.navbar__right-icon{
+    font-size: 12px;
+    /* background-color: #cb112d; */
+    padding-top: 5px;
+    line-height: 24px;
+    text-align: center;
+    align-items: center;
+}
+
+#title--ad{
+    line-height: 18px;
+    color: #5c3b09;
+}
+
+.navbar__ellipses--one {
+   display:inline;
+   /* background-color: blueviolet; */
+   /* text-align: center;
+   align-items: center;
+   justify-content: center; */
+   /* align center them to the rtabs  */
+
+}
+
+ .business__icon{
+    /* background-color: aquamarine; */
+    display: none;
+}
+
+.menu-tabs__title{
+    display: none;
+}
+
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+ @media screen and (min-width: 590px) and (max-width: 767px){
+    /* ==========LEFT SIDE OF NAVBAR ============*/
+body{
+    /* background: blue; */
+}
+.navbar {
+/* width: 100%;  */
+/* background-color: yellow; */
+display: flex;  /* all three boxes will align with go one after another */
+/* justify-content: space-evenly; */
+line-height: 24px;
+}
+
+.navbar__search{
+margin-right: 40px;
+/* don't need a large right margin for small devices */
+width: 0px;
+/* no longer exists, does need a width */
+}
+
+.navbar__search .fa-search{
+/* the fa.search icon is a child of the parent nav_search class */
+font-size: 20px;
+/* its bigger  */
+opacity: 0.6;
+/* faded  */
+top: 10px;
+/* changed */
+left: 5px;
+/* changed */
+line-height: none;
+}  
+
+.navbar__search input[type ="text"]{
+background: transparent;
+/* made transparent */
+display:none;
+/* the search placeholder gone */
+}
+
+/* ====================== NAVBAR MIDDLE SECTION ================================== */
+
+.navbar__menu-box{
+background-color: plum;
+margin-right: 10px;
+/* make margin right larger */
+
+}
+
+.navbar__menu-box:last-child {
+margin-left: auto; /* Push the last menu-box to the right */
+/* margin-right: auto; Push the last menu-box to the right */
+
+}
+
+.menu-tabs__icon {
+/* background: red; */
+width: 25px;
+height: 25px;
+}
+
+.notification-bubble{
+top: -8px; 
+right: -8px; 
+/* new top and right positioning  */
+}
+
+#menu-tab--dark{
+border-bottom: none;
+/* no border bottom for small devices */
+}
+
+.home__icon{
+fill:black; 
+/* changed, filled in black */
+}
+
+.menu-tabs__title span{
+display: none;
+/* changed, don't display menu tab titles */
+}
+
+#menu-box--dark{
+opacity: none;
+}
+
+
+#avatar{
+width: 25px; /* Make the image fill the container width */
+height: 25px; /*Make the image fill the container height*/
+/* changed, made smaller */
+}
+
+#carat{
+display: none;
+/* changed, don't display carat */
+}
+
+/* ========================== Navbar RIGHT SECTION ============*/
+
+.navbar__right-section {
+/* background-color: red; */
+padding:0px;
+/* gave it a small padding */
+}
+
+
+#title--ad{
+line-height: 18px;
+color: #5c3b09;
+display: flex;
+/* try premium for free  */
+}
+
+
+}
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 991px){
+/* ==========LEFT SIDE OF NAVBAR ============*/
+body{
+/* background: blue; */
+}
+.navbar {
+/* width: 100%;  */
+/* background-color: yellow; */
+display: flex;  /* all three boxes will align with go one after another */
+/* justify-content: space-evenly; */
+line-height: 24px;
+}
+
+.navbar__search{
+margin-right: 40px;
+/* don't need a large right margin for small devices */
+width: 0px;
+/* no longer exists, does need a width */
+}
+
+.navbar__search .fa-search{
+/* the fa.search icon is a child of the parent nav_search class */
+font-size: 20px;
+/* its bigger  */
+opacity: 0.6;
+/* faded  */
+top: 10px;
+/* changed */
+left: 5px;
+/* changed */
+line-height: none;
+}  
+
+.navbar__search input[type ="text"]{
+background: transparent;
+/* made transparent */
+/* the search placeholder gone */
+}
+
+/* ====================== NAVBAR MIDDLE SECTION ================================== */
+
+.navbar__menu-box{
+background-color: plum;
+/* make margin right larger */
+margin-right: 0px;
+
+}
+
+.navbar__menu-box:last-child {
+margin-left: auto; /* Push the last menu-box to the right */
+/* margin-right: auto; Push the last menu-box to the right */
+
+}
+
+.menu-tabs__icon {
+/* background: red; */
+width: 25px;
+height: 25px;
+}
+
+.notification-bubble{
+top: -8px; 
+right: -8px; 
+/* new top and right positioning  */
+}
+
+
+.home__icon{
+fill:black; 
+/* changed, filled in black */
+}
+
+
+#menu-box--dark{
+opacity: none;
+}
+
+
+/* ========================== Navbar RIGHT SECTION ============*/
+
+.navbar__right-section {
+/* background-color: red; */
+padding:0px;
+/* gave it a small padding */
+}
+
+
+#title--ad{
+line-height: 18px;
+color: #5c3b09;
+display: flex;
+/* try premium for free  */
+}
+
+
+}
+
+@media screen and (min-width:992px)  and(max-width: 1024px){
+/* ==========LEFT SIDE OF NAVBAR ============*/
+body{
+/* background: blue; */
+}
+.navbar {
+/* width: 100%;  */
+
+display: flex;  /* all three boxes will align with go one after another */
+/* justify-content: space-evenly; */
+line-height: 24px;
+}
+
+
+/* ====================== NAVBAR MIDDLE SECTION ================================== */
+
+.navbar__menu-box{
+/* background-color: plum; */
+/* margin-right: 0px; */
+
+}
+
+.navbar__menu-box:last-child {
+margin-left: auto; /* Push the last menu-box to the right */
+/* margin-right: auto; Push the last menu-box to the right */
+
+}
+
+.menu-tabs__icon {
+/* background: red; */
+width: 25px;
+height: 25px;
+}
+
+.notification-bubble{
+top: -8px; 
+right: -8px; 
+/* new top and right positioning  */
+}
+
+
+.home__icon{
+fill:black; 
+/* changed, filled in black */
+}
+
+
+#menu-box--dark{
+opacity: none;
+}
+
+
+/* ========================== Navbar RIGHT SECTION ============*/
+
+.navbar__right-section {
+/* background-color: red; */
+padding:0px;
+/* gave it a small padding */
+}
+
+
+#title--ad{
+line-height: 18px;
+color: #5c3b09;
+display: flex;
+/* try premium for free  */
+}
+
+
+}
+
+
+/* ===================================LEFT SIDE  BAR Media Queries====================================== */
+
+/* small devices */
+@media screen and  (max-width:589px){
+    .home-feed__container{
+        /* background-color: #5c3b09; */
+        margin: 60px 0px 0px 0px;
+    
+    }
+    
+    .home-feed{
+        /* background-color: aqua; */
+        align-items: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        /* changed, become stacked up on top of eachother */
+        gap: 20px;
+        
+        /* sets the height to 100% of the viewport height */
+    }
+    
+    .sidebar--left{
+        background-color: var(--home-background);
+        height: 100vh;
+        width: 100%;
+        /* changed width to take 100% of its container class */
+        line-height: 24px;
+        /* position:fixed; */
+        /* box-shadow: 10px 5px 10px var(blue); */
+    
+    }
+    
+    .profile__background img{
+        width: 100%; 
+        height: 70px; 
+        /* changed height to 70px */
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        /* no border radius for smaller devices */
+    
+    }
+    
+     .profile__image{
+        top: 30px;
+        right: 70px;
+        /* changed to right of 70px  */
+        
+    } 
+    
+    .profile__image img{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: solid white 6px;
+        /* transform: translate(-50%, -50%); */
+    }
+   
+    /* connections bax */
+    .sidebar-connections__box{
+        display:none;
+        /* changed to display none */
+        
+    }
+
+    /* ad box begins here  */
+    .sidebar-ad__box{
+        display:none;
+        /* don't show */
+
+    }
+
+    /* bookmark/ my item section */
+    .sidebar-bookmark__box{
+        display: none;
+            /* don't show */
+    }
+
+    /* bottom od side bar  */
+
+    .sidebar--bottom{
+       display: none;
+    }
+    
+    .sidebar-more{
+        padding:15px;
+        /* changed the padding */
+        display:inline-flex;
+        /* we want this to display when we are on smaller screens */
+    }
+    
+    .sidebar-chevron--down{
+        width: 20px;
+        height: 20px;
+        margin-left:7px;
+        /* chnaged size and margin-left */
+    }
+}
+
+@media screen and (min-width:590px) and (max-width:767px){
+    .home-feed__container{
+        /* background-color: #5c3b09; */
+        margin: 60px 0px 0px 0px;
+    
+    }
+    
+    .home-feed{
+        display: flex;
+        flex-direction: column;
+        /* changed, become stacked up on top of eachother */
+         margin: 10px;
+         /* add a 20 px margin on home feed */
+        
+        /* sets the height to 100% of the viewport height */
+    }
+    
+    .sidebar--left{
+        background-color: var(--home-background);
+        height: 100vh;
+        width: 100%;
+        /* changed width to take 90% of its container class */
+        line-height: 24px;
+        border-radius: 10px;
+    }
+    
+    .profile__background img{
+        width: 100%; 
+        height: 70px; 
+        /* changed height to 70px */
+
+    
+    }
+    
+     .profile__image{
+        top: 30px;
+        right: 70px;
+        /* changed to right of 70px  */
+        
+    } 
+    
+    .profile__image img{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: solid white 6px;
+        /* transform: translate(-50%, -50%); */
+    }
+   
+    /* connections bax */
+    .sidebar-connections__box{
+        display:none;
+        /* changed to display none */
+        
+    }
+
+    /* ad box begins here  */
+    .sidebar-ad__box{
+        display:none;
+        /* don't show */
+
+    }
+
+    /* bookmark/ my item section */
+    .sidebar-bookmark__box{
+        display: none;
+            /* don't show */
+    }
+
+    /* bottom od side bar  */
+
+    .sidebar--bottom{
+       display: none;
+    }
+    
+    .sidebar-more{
+        padding:7px;
+        /* changed the padding */
+        display:inline-flex;
+        border-radius: 10px;
+        /* we want this to display when we are on smaller screens */
+    }
+
+    .sidebar-more span{
+        padding:2px;
+        justify-content: center;
+    }
+    
+    .sidebar-chevron--down{
+        width: 20px;
+        height: 20px;
+        margin-left:7px;
+        /* chnaged size and margin-left */
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+   body{
+    /* background-color: red; */
+   }
+    .home-feed{
+        /* background-color: pink; */
+        justify-content: center;
+    }
+    .profile__background img{
+        width: 100%; 
+        height: 70px; 
+        /* changed height to 70px */
+    }
+    
+     .profile__image{
+        top: 30px;
+        left: 40px;
+        /* changed to left of 40px  */
+        
+    } 
+    
+    .profile__image img{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: solid white 6px;
+        /* transform: translate(-50%, -50%); */
+    }
+    .sidebar-more{
+        display: none;
+    }
+    
+
+    .sidebar--right{
+        display:none;
+    }
+   
+}
+
+@media screen and (min-width:992px) and (max-width:1024px){
+   
+     .home-feed{
+         /* background-color: pink; */
+         justify-content: center;
+         margin:20px;
+         /* add a margin of 20px*/
+     }
+     .profile__background img{
+         width: 100%; 
+         height: 70px; 
+         /* changed height to 70px */
+     }
+     
+      .profile__image{
+         top: 30px;
+         left: 40px;
+         /* changed to left of 40px  */
+         
+     } 
+     
+     .profile__image img{
+         width: 90px;
+         height: 90px;
+         border-radius: 50%;
+         border: solid white 6px;
+         /* transform: translate(-50%, -50%); */
+     }
+     .sidebar-more{
+         display: none;
+     }
+     
  
+    
+    
+ }
+
+ @media screen and (min-width:1025px) and (max-width: 1252px) {
+    body{
+        /* background-color: orange; */
+    }
+    .home-feed{
+        /* background-color: pink; */
+        justify-content: center;
+        margin:20px;
+        /* add a margin of 20px*/
+    }
+    .profile__background img{
+        width: 100%; 
+        height: 70px; 
+        /* changed height to 70px */
+    }
+    
+     .profile__image{
+        top: 30px;
+        left: 40px;
+        /* changed to left of 40px  */
+        
+    } 
+    
+    .profile__image img{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: solid white 6px;
+        /* transform: translate(-50%, -50%); */
+    }
+    .sidebar-more{
+        display: none;
+    }
+    
+
+   
+   
+}
+
+
+/* ====================================== MIDDLE OF HOME FEED MEDIA QUERIES ========================================== */
+@media screen  and (max-width:589px){
+    .home-feed--middle{
+        width: 100%;
+        /* changed to make width 100% */
+     
+     }
+    
+     .share-box-feed-entry{
+        border-radius: 0px;
+        /* changed border radius to have 0px */
+     }
+    
+    .share-box-feed-post{
+        width: 100%;
+        /* changed to 100% */
+    }
+    
+
+    .divider__dropdown{
+        background-color: red;
+        /* fix positioning */
+    }
+    
+    
+
+    .divider__dropdown-icon{
+       /* fix positioning of carot  */
+        
+    }
+    
+/* =================== POSTS ==================== */
+    
+    .feed-posts{
+        border-radius: 0px;
+        /* background-color: red; */
+        /* no border radius  */
+        /* margin-bottom: 10px; */
+    }
+    
+
+    
+    /* ===================== CONTENT POSTS ================ */
+    .post-content{
+        /* background-color: yellow; */
+       /* add elipses to text, see more ... */
+    }
+    
+    
+    
+    /* ======================================= post bottom area ===========================  */
+    
+    .feed-share__buttons{
+        padding: 5px;
+        /* changed padding to 5px */
+        margin: 2px;
+        /* changed margin to 2px */
+
+        font-size: 12px;
+        /* background-color: aqua; */
+
+    }
+    
+    .btn{
+        margin-right: 2px;
+        /* changed margin to 10px */
+        justify-content: center;
+        /* changed margin to less value */
+        width:25px;
+        height:25px;
+      
+    }
+    
+    .btn-title{
+        font-size: 12px;
+        /* chnaged font size  */
+    }
+}
+
+@media screen and (min-width:590px) and (max-width:767px){
+ 
+        .home-feed--middle{
+            width: 100%;
+            /* changed to make width 100% */
+         
+         }
+        
+         .share-box-feed-entry{
+            border-radius: 10px;
+            /* background-color: aqua; */
+            /* changed border radius to have 0px */
+         }
+        
+        .share-box-feed-post{
+            width: 100%;
+            /* changed to 100% */
+        }
+        
+    
+        .divider__dropdown{
+            background-color: red;
+            /* fix positioning */
+        }
+        
+        
+    
+        .divider__dropdown-icon{
+           /* fix positioning of carot  */
+            
+        }
+        
+    /* =================== POSTS ==================== */
+        
+        .feed-posts{
+            border-radius: 10px;
+            /* no border radius  */
+            /* margin-bottom: 10px; */
+        }
+        
+    
+        
+        /* ===================== CONTENT POSTS ================ */
+        .post-content{
+            /* background-color: yellow; */
+           /* add elipses to text, see more ... */
+        }
+        
+        
+        
+        /* ======================================= post bottom area ===========================  */
+        
+        .feed-share__buttons{
+            padding: 5px;
+            /* changed padding to 5px */
+            margin: 2px;
+            /* chnged margin to 2px */
+        }
+        
+       
+        .btn{
+            margin:10px;
+            /* changed margin to 10px */
+            justify-content: center;
+            /* changed margin to less value */
+          
+        }
+        
+        .btn-title{
+            font-size: 14px;
+            /* chnaged font size  */
+        }
+    }
+
+ @media screen and (min-width:768px) and (max-width:991px){
+ 
+        .home-feed--middle{
+            /* width: 100%; */
+            /* dont want the width to be 100 % */
+         
+         }
+        
+         .share-box-feed-entry{
+            border-radius: 0px;
+            /* changed border radius to have 0px */
+         }
+        
+        .share-box-feed-post{
+            width: 100%;
+            /* changed to 100% */
+        }
+        
+    
+        .divider__dropdown{
+            background-color: red;
+            /* fix positioning */
+        }
+        
+        
+    
+        .divider__dropdown-icon{
+           /* fix positioning of carot  */
+            
+        }
+        
+    /* =================== POSTS ==================== */
+        
+        .feed-posts{
+            border-radius: 0px;
+            /* no border radius  */
+            /* margin-bottom: 10px; */
+        }
+        
+    
+        
+        /* ===================== CONTENT POSTS ================ */
+        .post-content{
+            /* background-color: yellow; */
+           /* add elipses to text, see more ... */
+        }
+        
+        
+        
+        /* ======================================= post bottom area ===========================  */
+        
+        .feed-share__buttons{
+            padding: 5px;
+            /* changed padding to 5px */
+            margin: 2px;
+            /* chnged margin to 2px */
+        }
+        
+       
+        .btn{
+            margin: 5px;
+            /* changed margin to 10px */
+            justify-content: center;
+            /* changed margin to less value */
+          
+        }
+        
+        .btn-title{
+            font-size: 13px;
+            /* chnaged font size  */
+        }
+    }   
+  
+ @media screen and (min-width:992px) and (max-width:1024px){
+ 
+        .home-feed--middle{
+            /* width: 100%; */
+            /* dont want the width to be 100 % */
+         
+         }
+        
+         .share-box-feed-entry{
+            border-radius: 0px;
+            /* changed border radius to have 0px */
+         }
+        
+        .share-box-feed-post{
+            width: 100%;
+            /* changed to 100% */
+        }
+        
+    
+        .divider__dropdown{
+            background-color: red;
+            /* fix positioning */
+        }
+        
+        
+    
+        .divider__dropdown-icon{
+           /* fix positioning of carot  */
+            
+        }
+        
+    /* =================== POSTS ==================== */
+        
+        .feed-posts{
+            border-radius: 0px;
+            /* no border radius  */
+            /* margin-bottom: 10px; */
+        }
+        
+    
+        
+        /* ===================== CONTENT POSTS ================ */
+        .post-content{
+            /* background-color: yellow; */
+           /* add elipses to text, see more ... */
+        }
+        
+        
+        
+        /* ======================================= post bottom area ===========================  */
+        
+        .feed-share__buttons{
+            padding: 5px;
+            /* changed padding to 5px */
+            margin: 2px;
+            /* chnged margin to 2px */
+        }
+        
+       
+        .btn{
+            /* margin: 5px; */
+            /* changed margin to 10px */
+            justify-content: center;
+            /* changed margin to less value */
+          
+        }
+        
+        .btn-title{
+            /* font-size: 13px; */
+            /* chnaged font size  */
+        }
+    }  
+
+@media screen and (min-width:1025px) and (max-width: 1252px) {
+ 
+            .home-feed--middle{
+                /* width: 100%; */
+                /* dont want the width to be 100 % */
+             
+             }
+            
+             .share-box-feed-entry{
+                border-radius: 0px;
+                /* changed border radius to have 0px */
+             }
+            
+            .share-box-feed-post{
+                width: 100%;
+                /* changed to 100% */
+            }
+            
+        
+            .divider__dropdown{
+                background-color: red;
+                /* fix positioning */
+            }
+            
+            
+        
+            .divider__dropdown-icon{
+               /* fix positioning of carot  */
+                
+            }
+            
+        /* =================== POSTS ==================== */
+            
+            .feed-posts{
+                border-radius: 0px;
+                /* no border radius  */
+                /* margin-bottom: 10px; */
+            }
+            
+        
+            
+            /* ===================== CONTENT POSTS ================ */
+            .post-content{
+                /* background-color: yellow; */
+               /* add elipses to text, see more ... */
+            }
+            
+            
+            
+            /* ======================================= post bottom area ===========================  */
+            
+            .feed-share__buttons{
+                padding: 5px;
+                /* changed padding to 5px */
+                margin: 2px;
+                /* chnged margin to 2px */
+            }
+            
+           
+            .btn{
+                /* margin: 5px; */
+                /* changed margin to 10px */
+                justify-content: center;
+                /* changed margin to less value */
+              
+            }
+            
+            .btn-title{
+                /* font-size: 13px; */
+                /* chnaged font size  */
+            }
+        
+ } 
+    
+ /*=========================================== sidebar right media queris ====================================== */
+       
+@media  screen and (max-width:589px){
+
+
+ .sidebar--right{
+    display: none;
+ }
+
+    
+}
+ 
+@media  screen and (min-width:590px) and (max-width:767px){
+
+    .sidebar--right{
+       display: none;
+    }
+   
+       
+   }
+
+@media  screen and (min-width:768px) and (max-width:991px){
+
+.sidebar--right{
+    display: none;
+}
+
+    
+}
+
+@media  screen and (min-width:992px) and (max-width:1024px){
+   .sidebar--right{
+    display: flex;
+   }
+    
+        
+    }
+
+
+       
+       
+    
+     
