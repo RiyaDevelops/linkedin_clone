@@ -25,6 +25,9 @@ body{
     background-color: var(--home-background);
     font-family: var(--apple-system-font);
     color:var(--text-color);
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 header{
@@ -44,6 +47,7 @@ header{
 
 .navbar {
     max-width: 1200px; 
+    width: 100%;
     /* same width as container, navbar starts in middle of page */
     margin: 0 auto;
     /* background-color: yellow; */
@@ -51,19 +55,17 @@ header{
     /* justify-content: space-evenly; */
     height: 100%;    /*takes 100% of the height of the parent class, header */
     cursor:pointer; 
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .navbar__left-section{
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
-    /* margin-left: 36px; */
-    /* background-color: aqua; */
 }
   
 .navbar__logo{
-    display: block;
+    display: flex;
 }
 
 .navbar__logo .fa-linkedin-square{
@@ -72,13 +74,22 @@ header{
     font-weight: 600;
 }
 
+.search-toggle {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    display: none;
+  }
+  
 .navbar__search{
     /* background-color: blueviolet; */
-    margin-left: 10px;
-    margin-right: 100px;
+    margin-left: 9px;
+    /* margin-right: 100px; */
+    /* we don't want it to have a fix width or a margin right of anything it is going to take up what evr space it wants  */
     position:relative;
     border-radius: 5px;
-    width: 300px;
+    /* we don't want it to have a fix width it is going to take up what evr space it wants  */
 }
 
 .navbar__search .fa-search{
@@ -98,6 +109,8 @@ header{
     font-size: 1rem;
     border-radius: 5px;
     padding: 8px 40px;
+    max-width: 275px;
+    /* wont get any wider */
     width: 100%;
     border: none;
     line-height: 24px;
@@ -112,6 +125,8 @@ header{
     text-align: center;
     justify-content: space-between;
     border-right: 2px solid var(--home-background);
+    margin-left: auto;
+    /* margin -left of auto  */
     
 }
 
@@ -126,12 +141,11 @@ header{
     /* same height as navbar so it all has same height  */
     height: 62px;
     margin-right: 14px;
-    /* outside spacing */
+    /* this is the margin -right between each icon */
     font-family: var(--apple-system-font); 
     font-weight: 400;
     line-height: 18px;
-    display: inline-flex;
-  align-items: center;
+    align-items: center;
     
 }
 .navbar__menu-box:last-child {
@@ -226,13 +240,11 @@ header{
 .navbar__right-section {
     /* background-color: red; */
     display: flex;
-    height: 62px;
+    width: auto;
+    /* width: auto will adjust their width accordingly to fit within the available space. */
     text-align: center;
     align-items: center;
     justify-content: center;
-    /* padding:2px; */
-    /* flex-wrap: nowrap; */
-
 }
 
 #title--ad{
@@ -243,51 +255,301 @@ header{
 
 .navbar__ellipses--one{
     display: none;
+    /* background-color: blueviolet;  */
+   text-align: center;
+   align-items: center;
+   justify-content: center; 
 }
 
-#navbar-ad{
+.navbar-ad{
+    width: 100%;
     /* background: yellow; */
     padding:5px;
 }
-#title--ad{
-    /* background-color: blue; */
-}
+
 
 
 /* ======================== feed containers  ============================== */
 .home-feed__container{
     /* background-color: #5c3b09; */
-    margin: 90px 0px 0px 0px;
     height: 100vh;
-    /* sets the height to 100% of the viewport height */
-    width: 100%;
+    box-sizing: content-box;
+    /* padding: 52px 0px 0px; */
+    margin: 80px 0px 0px 0px;
+
 
 }
 
 .home-feed{
     /* background-color: aqua; */
     max-width: 1200px;
+    /* width: 100%; */
     margin: 0 auto;
-    /* display: flex; */
+    /* padding: 90px;; */
+    display: flex;
     align-items: center;
+    /* justify-content: center; */
     height: 100vh;
     display: flex;
     flex-direction: row;
     gap: 20px;
-    
-    /* sets the height to 100% of the viewport height */
+    /* padding:  24px; */
+   
+}
+ /* ================================= MEDIA QUERIE ============================ */
+
+@media screen and (max-width:1150px){
+.home-feed__container{
+    /* background-color: #cb112d; */
 }
 
-/* LEFT SIDE BAR BEGINS HERE*/
+}
+
+@media screen and (max-width:991px){
+.home-feed{
+justify-content: center;
+}
+
+}
+
+@media screen and (max-width:802px){
+ .home-feed{
+    /* background-color: #cb112d; */
+    display: flex;
+    flex-direction: column;
+}
+    }
+
+@media screen and (max-width:767px){
+
+.home-feed{
+/* background-color: #cb112d; */
+display: flex;
+flex-direction: column;
+/* padding: 30px; */
+}
+
+}
+
+@media  screen and (max-width:512px) {
+.home-feed{
+padding: 0;
+}
+.home-feed__container{
+margin: 60px 0px 0px 0px;
+padding:0px;
+
+}
+}
+
+@media  screen and (max-width:537px) {
+    .home-feed{
+    padding: 0;
+    }
+    .home-feed__container{
+    margin: 60px 0px 0px 0px;
+    padding:0px;
+    
+    }
+    }
+@media  screen and (max-width:450px) {
+.home-feed{
+padding: 0;
+}
+.home-feed__container{
+margin: 0;
+}
+}
+/*=========== LEFT SIDE BAR BEGINS HERE*/
 .sidebar--left{
+background-color: var(--home-background);
+height: 100vh;
+width: 225px;
+/* give it a max width so it cant get any bigger than that */
+line-height: 24px;
+/* position:fixed; */
+/* box-shadow: 10px 5px 10px var(blue); */
+}
+
+/* =============== media querie ends here ============================ */
+
+@media screen and (max-width:1159px){
+.sidebar--left{
+min-width: 225px;
+}
+
+}
+
+
+@media screen and (max-width:830px){
+.sidebar--left{
+min-width: 225px;
+}
+
+}
+
+@media screen and (max-width:802px){
+    .sidebar--left{
     background-color: var(--home-background);
     height: 100vh;
-    width: 20%;
+    width: 100%;
+    /* changed width to take 90% of its container class */
     line-height: 24px;
-    /* position:fixed; */
-    /* box-shadow: 10px 5px 10px var(blue); */
+    border-radius: 10px;
+    margin: 300px 0px 0px;
+    
+    }
+    
+    .profile__background img{
+    width: 100%; 
+    height: 70px; 
+    /* changed height to 70px */
+    
+    
+    }
+    
+    .profile__image{
+    top: 30px;
+    right: 70px;
+    /* changed to right of 70px  */
+    
+    } 
+    
+    .profile__image img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: solid white 6px;
+    /* transform: translate(-50%, -50%); */
+    }
+    
+    /* connections bax */
+    .sidebar-connections__box{
+    display:none;
+    /* changed to display none */
+    
+    }
+    
+    /* ad box begins here  */
+    .sidebar-ad__box{
+    display:none;
+    /* don't show */
+    
+    }
+    
+    /* bookmark/ my item section */
+    .sidebar-bookmark__box{
+    display: none;
+        /* don't show */
+    }
+    
+    /* bottom od side bar  */
+    
+    .sidebar--bottom{
+    display: none;
+    }
+    
+    .sidebar-more{
+    padding:7px;
+    /* changed the padding */
+    display:flex;
+    border-radius: 10px;
+    /* we want this to display when we are on smaller screens */
+    }
+    
+    .sidebar-more span{
+    padding:2px;
+    justify-content: center;
+    }
+    
+    
+    }
+
+@media screen and (max-width:767px){
+.sidebar--left{
+background-color: var(--home-background);
+height: 100vh;
+width: 100%;
+/* changed width to take 90% of its container class */
+line-height: 24px;
+border-radius: 10px;
+margin: 300px 0px 0px;
 
 }
+
+.profile__background img{
+width: 100%; 
+height: 70px; 
+/* changed height to 70px */
+
+
+}
+
+.profile__image{
+top: 30px;
+right: 70px;
+/* changed to right of 70px  */
+
+} 
+
+.profile__image img{
+width: 90px;
+height: 90px;
+border-radius: 50%;
+border: solid white 6px;
+/* transform: translate(-50%, -50%); */
+}
+
+/* connections bax */
+.sidebar-connections__box{
+display:none;
+/* changed to display none */
+
+}
+
+/* ad box begins here  */
+.sidebar-ad__box{
+display:none;
+/* don't show */
+
+}
+
+/* bookmark/ my item section */
+.sidebar-bookmark__box{
+display: none;
+    /* don't show */
+}
+
+/* bottom od side bar  */
+
+.sidebar--bottom{
+display: none;
+}
+
+.sidebar-more{
+padding:7px;
+/* changed the padding */
+display:flex;
+border-radius: 10px;
+/* we want this to display when we are on smaller screens */
+}
+
+.sidebar-more span{
+padding:2px;
+justify-content: center;
+}
+
+
+}
+
+
+@media  screen and (max-width:512px) {
+.sidebar--left{
+border-radius: 0px;
+}
+}
+
+/* ============ media queries ends here =========== */
 
 .sidebar--top{
     background-color: white;
@@ -298,6 +560,7 @@ header{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow values as needed */
 
 }
+
 
 .sidebar-profile__box{
     background-color: white; 
@@ -324,8 +587,8 @@ header{
 
 
 .profile__background img{
-    max-width: 100%; /* Set the maximum width to 100% of its container */
-    height: auto; /* Allow te height to adjust proportionally */
+    width: 100%; /* Set the maximum width to 100% of its container */
+    height: 100px; /* Allow te height to adjust proportionally */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
@@ -335,10 +598,46 @@ header{
     padding-bottom: 40px;
     position: absolute;
     /* this the child class */
-    top: 30px;
+    top: 50px;
     left: 70px;
     
 } 
+
+ /* ================================= MEDIA QUERIE ============================ */
+
+
+@media screen and (max-width:990px){
+    .profile__image{
+        top:50px;
+        left:70px;
+    }
+}
+    @media screen and (max-width:782px){
+        .profile__image{
+            top:50px;
+            left:70px;
+        }
+    
+
+}
+
+@media screen and (max-width:730px){
+    .profile__image{
+        top:50px;
+        left:70px;
+    }
+
+}
+@media screen and (max-width:550px){
+    .profile__image{
+        top:50px;
+        left:70px;
+    }
+
+
+}
+
+ /* ================================= MEDIA QUERIE ============================ */
 
 .profile__image img{
     width: 90px;
@@ -350,7 +649,7 @@ header{
 
 .profile__name{
     /* background-color: #5c3b09; */
-    line-height: 10px;
+    line-height:26px;
     padding: 50px 20px 10px 20px;
     font-weight: 600;
     font-size: 15px;
@@ -557,12 +856,12 @@ header{
 .sidebar-more{
     background-color: var(--home-background);
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    display: none;
+    /* display: none; */
     
 }
 
@@ -578,12 +877,29 @@ header{
 
  /* ========================middle section of home feed */
 
- .home-feed--middle{
-    /* background: yellow; */
-    width: 50%;
+ main{
+    /* background: purple; */
+    width:600px;
     height: 100vh;
     /* background-color: white; */
+    /* padding: 70px; */
  }
+
+ /* ================================= MEDIA QUERIE ============================ */
+ @media screen and (max-width:802px){
+    main{
+        width:100%;
+        /* background-color: blue; */
+        }
+    }
+
+ @media screen and (max-width:767px){
+    main{
+        width:100%;
+        /* background-color: blue; */
+        }
+    }
+ /* ================================= MEDIA QUERIE ============================ */
 
  .share-box-feed-entry{
     width: 100%;
@@ -601,6 +917,7 @@ header{
     /* box-shadow: 0 10px 9px rgba(0, 0, 0, 0.1);  */
 
  }
+
 
  .share-box-feed-entry__top{
     display: flex;
@@ -644,6 +961,7 @@ header{
     /* opacity:0.9; */
 
 }
+
 
 .share-box-feed-post input[type=text]:hover{
     background-color: var(--search-holder);
@@ -1106,7 +1424,6 @@ hr {
 }
 
 .feed-share__buttons{
-    font-size: 20px;
     border-radius: 4px;
     width: 100%;
     /* height: 100%; */
@@ -1123,6 +1440,38 @@ hr {
 
 }
 
+    
+
+
+@media  screen and (max-width:596px) {
+    .feed-share__buttons{ 
+        margin: 0px;
+    }
+}
+
+
+@media  screen and (max-width:547px) {
+    .feed-share__buttons{
+        margin: 3px;
+        padding: 3px;
+       
+    }
+}
+
+@media  screen and (max-width:450px) {
+    .feed-share__buttons{
+        /* background-color: red;    */
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .btn-title{
+        display: none;
+    }
+    
+}
+
+
 .feed-share__buttons:hover{
     background-color: var(--search-holder);
     /* opacity: 0.2; */
@@ -1130,8 +1479,8 @@ hr {
 
 .btn{
     display: flex;
-    width: 30px;
-    height:30px;
+    width: 25px;
+    height:25px;
     text-align: center;
     /* align-items: center; */
     margin-right: 20px;
@@ -1169,6 +1518,13 @@ hr {
     width: 300px;
     height: 100dvh;
     flex-direction: column;
+ }
+/* media querie */
+ @media screen and (max-width:991px){
+    .sidebar--right{
+        display:none;
+    }
+    
  }
 
     .news-feed--top{
